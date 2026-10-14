@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typical Webpage</title>
+    <style>
+      :root {
+        --bg: #f4f7fb;
+        --panel: #ffffff;
+        --primary: #2b6cb0;
+        --primary-dark: #1f4e79;
+        --text: #1a202c;
+        --muted: #4a5568;
+        --border: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        background: var(--primary-dark);
+        color: #fff;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        color: #fff;
+        opacity: 0.9;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #ebf4ff, #dbeafe);
+        padding: 80px 0;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin: 0 0 16px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: var(--muted);
+        margin: 0 0 24px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s ease;
+      }
+
+      .button.primary {
+        background: var(--primary);
+        color: #fff;
+      }
+
+      .button.secondary {
+        background: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+      }
+
+      .button:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+
+      .hero-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 16px 40px rgba(34, 56, 92, 0.08);
+      }
+
+      .stat {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .stat-label {
+        color: var(--muted);
+      }
+
+      .stat-value {
+        font-weight: bold;
+      }
+
+      main {
+        padding: 60px 0;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+      }
+
+      article,
+      aside {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      h2 {
+        margin-top: 0;
+        font-size: 1.8rem;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .side-box {
+        background: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        margin-top: 16px;
+      }
+
+      footer {
+        background: #1f2937;
+        color: #d1d5db;
+        text-align: center;
+        padding: 20px;
+      }
+
+      @media (max-width: 760px) {
+        .hero-content,
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        nav {
+          flex-direction: column;
+          justify-content: center;
+          padding: 16px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">Bright Studio</div>
+          <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <h1>We build websites that people remember.</h1>
+          <p>
+            Creative digital experiences designed to help your brand stand out,
+            connect with your audience, and grow with confidence.
+          </p>
+          <div class="buttons">
+            <a class="button primary" href="#">Get Started</a>
+            <a class="button secondary" href="#">View Work</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stat">
+            <span class="stat-label">Projects</span>
+            <span class="stat-value">240+</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Clients</span>
+            <span class="stat-value">80+</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Satisfaction</span>
+            <span class="stat-value">96%</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Growth</span>
+            <span class="stat-value">3.4x</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div class="container content-grid">
+        <article>
+          <h2>Why choose us?</h2>
+          <p>
+            Our approach combines strategy, design, and technology to deliver
+            websites that are easy to use, visually engaging, and built for real
+            business goals.
+          </p>
+          <p>
+            Whether you are launching a new brand or refreshing an existing one,
+            we focus on clarity, performance, and long-term value from the very
+            first idea to the final launch.
+          </p>
+          <ul>
+            <li>Clear messaging that speaks directly to your audience</li>
+            <li>Responsive design for desktop, tablet, and mobile</li>
+            <li>Fast performance and smooth user experience</li>
+            <li>Ongoing support after launch</li>
+          </ul>
+        </article>
+
+        <aside>
+          <h2>Quick Info</h2>
+          <div class="side-box">
+            <strong>Services</strong>
+            <p>Branding, web design, UX strategy, content planning.</p>
+          </div>
+          <div class="side-box">
+            <strong>Timeline</strong>
+            <p>Most projects launch within 3 to 6 weeks.</p>
+          </div>
+          <div class="side-box">
+            <strong>Contact</strong>
+            <p>Email: hello@brightstudio.example</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      © 2026 Bright Studio. All rights reserved.
+    </footer>
+  </body>
+</html>
